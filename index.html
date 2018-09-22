@@ -34,6 +34,23 @@
     
     
     
+        <script>
+          // BEAT MESSAGE
+          try {
+            function uuidv4() {
+              return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                return v.toString(16);
+              });
+            }
+            window.wixBiSession = {viewerSessionId: uuidv4(), initialTimestamp: Date.now(), visitorId: '51bf6370-72e1-4a30-a92d-4f8fadf128f3',  is_rollout: 0 };
+            (new Image()).src = 'https://frog.wix.com/bt?src=29&evid=3&pn=1&et=1&v=1.4664.22&msid=8b822cdf-ee3a-463d-a776-d437943bc240&vsi=' + wixBiSession.viewerSessionId +
+              '&url=' + encodeURIComponent(location.href.replace(/^http(s)?:\/\/(www\.)?/, '')) +
+              '&isp=0&st=2&ts=0&iss=1&c=' + wixBiSession.initialTimestamp + '&vid=' + wixBiSession.visitorId  + '&is_rollout=0'
+            ;
+          } catch (e){}
+          // BEAT MESSAGE END
+        </script>
     
     
     
